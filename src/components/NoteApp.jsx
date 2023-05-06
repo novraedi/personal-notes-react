@@ -37,9 +37,6 @@ class NoteApp extends React.Component {
   }
   onHandleSearchTitle(event) {
     const valueTitle = event.target.value;
-    // const filteredNotes = getInitialData().filter((note) =>
-    //   note.title.toLowerCase().includes(valueTitle)
-    // );
     this.setState({ searchTitle: valueTitle });
   }
   onArchiveNoteHandler(id) {

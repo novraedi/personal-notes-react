@@ -20,6 +20,8 @@ class NoteInput extends React.Component {
   }
   onSubmitEventHandler(event) {
     event.preventDefault();
+    if (this.state.title.length === 0 || this.state.body.length === 0)
+      return alert("Judul dan Isi Catatan tidak boleh kosong!");
     this.props.addNote(this.state);
     this.setState({ title: "", body: "" });
   }
